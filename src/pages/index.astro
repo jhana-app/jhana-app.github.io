@@ -1,0 +1,25 @@
+---
+
+import type { FaqFrontmatter } from '@/components/FaqItemComponent';
+import { About } from '@/partials/About';
+import Faq from "@/partials/Faq.astro";
+import { Hero } from '@/partials/Hero';
+import Base from '@/templates/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+
+
+const allItems = await Astro.glob<FaqFrontmatter>('../content/faq/*.md');
+
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+  <Hero />
+
+  <About />
+  <Faq allItems={allItems} />
+
+</Base>

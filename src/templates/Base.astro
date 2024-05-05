@@ -1,0 +1,46 @@
+---
+import { Footer } from '@/partials/Footer';
+import { Navbar } from '@/partials/Navbar';
+import { AppConfig } from '@/utils/AppConfig';
+
+export interface Props {
+  head: {
+    title: string;
+    description: string;
+  };
+}
+
+const {
+  head: { title, description },
+} = Astro.props as Props;
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>{title}</title>
+    <meta name='description' content={description} />
+    <meta name='author' content={AppConfig.author} />
+
+    <link rel='icon' type='image/x-icon' href='/assets/img/logo.png' />
+
+    <!-- Open Graph / Facebook -->
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content='Jhana App' />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content='/assets/img/social-image.png' />
+    <!-- Twitter -->
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:title' content='Jhana App' />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:image' content='/assets/img/social-image.png' />
+  </head>
+  <body class='bg-slate-900 text-gray-100'>
+    <Navbar />
+
+    <slot></slot>
+
+    <Footer />
+  </body>
+</html>

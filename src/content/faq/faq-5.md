@@ -1,0 +1,4 @@
+---
+question: Are there any side effects and contraindications when using jhana states?
+---
+Yes. As any deep meditation practice, concentration level required to access jhana, might expose  some internal mental health issues. Some possible side effects of jhana states include feelings of disorientation or dizziness. Additionally, certain medical conditions or medications may make it unsafe to practice jhana meditation. That being said, please keep in mind that these side effects are not very common and most people who do practice jhana states do not experience any negative effects. However, it's always a good idea to consult with a healthcare professional before starting a new meditation practice, especially if you have any underlying medical conditions.

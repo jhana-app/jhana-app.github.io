@@ -1,0 +1,23 @@
+---
+import type { MarkdownInstance} from "@/astro-boilerplate-components";
+import { Section } from "@/astro-boilerplate-components";
+import {type FaqFrontmatter } from "@/components/FaqItemComponent";
+import { FaqItemsComponent } from "@/components/FaqItemsComponent";
+
+import FaqItem from "./FaqItem.astro";
+
+export interface Props {
+  allItems: MarkdownInstance<FaqFrontmatter>[];
+}
+
+const { allItems } = Astro.props as Props;
+
+---
+
+<Section title="FAQ">
+  <FaqItemsComponent>
+    {allItems.map((item) => (
+      <FaqItem {...item} />
+    ))}
+  </FaqItemsComponent>
+</Section>

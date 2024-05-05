@@ -1,0 +1,12 @@
+---
+
+import type { MarkdownInstance } from "@/astro-boilerplate-components";
+import type { FaqFrontmatter } from "@/components/FaqItemComponent";
+import { FaqItemComponent} from "@/components/FaqItemComponent";
+
+type Props = MarkdownInstance<FaqFrontmatter>;
+
+const { frontmatter, Content} = Astro.props as Props;
+
+---
+<FaqItemComponent client:idle question={frontmatter.question}><Content /></FaqItemComponent>
